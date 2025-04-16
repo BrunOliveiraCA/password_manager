@@ -20,8 +20,8 @@ Instale a biblioteca com o pip:
 pip install cryptography
 ```
 
-🚀 Como usar
-1. Gerar a chave de criptografia
+## 🚀 Como usar
+1. Gerar a chave de criptografia<br>
 Antes de rodar o programa, é necessário gerar a chave que será usada para criptografar e descriptografar as senhas. Descomente o trecho abaixo no código e execute uma única vez:
 
 ```bash
@@ -34,7 +34,7 @@ write_key()
 ```
 Isso criará o arquivo key.key, que será utilizado posteriormente.
 
-2. Executar o programa
+2. Executar o programa<br>
 Após gerar a chave, comente novamente o trecho write_key() e rode o programa normalmente:
 
 ```bash
