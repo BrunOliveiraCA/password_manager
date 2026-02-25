@@ -1,85 +1,112 @@
-# 🔐 Gerenciador de Senhas com Criptografia
+<div align="center">
+    <p>🔐 Encrypted Password Manager</p>
+</div>
 
-Este é um simples gerenciador de senhas em Python que utiliza a biblioteca `cryptography` para armazenar senhas de forma segura usando criptografia simétrica com `Fernet`.
 
-## 📦 Funcionalidades
+This is a simple password manager built with Python that uses the cryptography library to securely store passwords using Fernet symmetric encryption.
 
-- 🔐 Criptografia das senhas utilizando chave única (`Fernet`)
-- ➕ Adição de novas senhas criptografadas
-- 👀 Visualização de senhas descriptografadas
-- 💾 Armazenamento local em arquivo `.txt`
+<br>
 
-## ⚙️ Pré-requisitos
+📦 Features
 
-- Python 3.6+
-- Biblioteca `cryptography`
+<br>
 
-Instale a biblioteca com o pip:
+    🔐 Password Encryption using a unique key (Fernet).
 
-```bash
+    ➕ Add new encrypted passwords.
+
+    👀 View decrypted passwords.
+
+    💾 Local Storage in a .txt file.
+
+<br>
+
+⚙️ Prerequisites
+
+<br>
+
+    Python 3.6+
+
+    cryptography library
+
+Install the library using pip:
+Bash
+
 pip install cryptography
-```
 
-## 🚀 Como usar
-1. Gerar a chave de criptografia<br>
-Antes de rodar o programa, é necessário gerar a chave que será usada para criptografar e descriptografar as senhas. Descomente o trecho abaixo no código e execute uma única vez:
+<br>
 
-```bash
+🚀 How to Use
+
+<br>
+
+1. Generate the Encryption Key
+
+Before running the program, you must generate the key used to encrypt and decrypt passwords. Uncomment the following snippet in the code and run it once:
+Python
+
 def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
         key_file.write(key)
 
 write_key()
-```
-Isso criará o arquivo key.key, que será utilizado posteriormente.
 
-2. Executar o programa<br>
-Após gerar a chave, comente novamente o trecho write_key() e rode o programa normalmente:
+This will create a key.key file, which will be required for subsequent runs.
+2. Run the Program
 
-```bash
+After generating the key, comment out the write_key() snippet and run the program normally:
+Bash
+
 python main.py
-```
 
-Você verá o seguinte menu:
+You will see the following menu:
+Plaintext
 
-```bash
 Would you like to add a new password, view existing ones or quit? (add/view/quit)?
-```
 
-#### add: adiciona uma nova conta e senha
-
-#### view: exibe todas as contas com suas senhas descriptografadas
-
-#### quit: encerra o programa
+add: Adds a new account and password.
+view: Displays all accounts with their decrypted passwords.
+quit: Exits the program.
 
 <br>
 
-## 📁 Estrutura de Arquivos
-
-#### main.py: código principal da aplicação
-
-#### key.key: chave de criptografia gerada (NUNCA compartilhe este arquivo publicamente)
-
-#### passwords.txt: arquivo onde as senhas são armazenadas de forma criptografada
+📁 File Structure
 
 <br>
 
-## 🛡️ Aviso de Segurança
-Este projeto é apenas para fins educacionais. Não use este gerenciador para armazenar senhas reais ou sensíveis, pois ele não possui proteção contra acesso físico ao arquivo nem gerenciamento avançado de segurança.
+    main.py: The main application code.
+
+    key.key: The generated encryption key (NEVER share this file publicly).
+
+    passwords.txt: The file where passwords are stored in encrypted format.
 
 <br>
 
-## 🧠 Aprendizados
-Este projeto demonstra:
-
-Leitura e escrita de arquivos com Python
-
-Criptografia simétrica usando Fernet
-
-Estrutura de menus via terminal
+🛡️ Security Disclaimer
 
 <br>
 
-## 📄 Licença
-Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e compartilhar.
+This project is for educational purposes only. Do not use this manager to store real or sensitive passwords, as it lacks protection against physical file access and advanced security management.
+
+<br>
+
+🧠 Key Learnings
+
+<br>
+
+This project demonstrates:
+
+    File handling (reading/writing) with Python.
+
+    Symmetric encryption using Fernet.
+
+    Terminal-based menu structures.
+
+<br>
+
+📄 License
+
+<br>
+
+This project is licensed under the MIT License. Feel free to use, modify, and share.
